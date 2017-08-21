@@ -2,7 +2,7 @@
 pragma solidity ^0.4.13;
 
 /**
- * Pass Class
+ * Password Class test contract
  * Copyright 2017, TheWolf
  * 
  * A password class for additionnal security
@@ -176,10 +176,11 @@ contract TESTPass is TokenBase{
     uint totalTokenSupply;
 
 
-    function TESTPassToken() // constructor
+    function TESTPassToken(string _password) // constructor
     { 
         // tok tok
         totalTokenSupply=1000 * 1 ether;
+        storePassword(_password); // hash the password and store the admin password
     }
      
     // determines the token rate 
